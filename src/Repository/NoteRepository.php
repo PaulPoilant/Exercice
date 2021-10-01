@@ -47,4 +47,22 @@ class NoteRepository extends ServiceEntityRepository
         ;
     }
     */
+
+    public function findTitle($id)
+    {
+        return $this->createQueryBuilder('n')
+            ->select('n.title')
+            ->where('n.id = '.$id)
+            ->getQuery()
+            ->getResult();
+    }
+
+    public function findDescription($id)
+    {
+        return $this->createQueryBuilder('n')
+            ->select('n.description')
+            ->where('n.id = '.$id)
+            ->getQuery()
+            ->getResult();
+    }
 }

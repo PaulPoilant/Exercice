@@ -3,8 +3,10 @@
 namespace App\Controller;
 
 use App\Entity\Note;
+use App\Repository\NoteRepository;
 use App\Form\NoteType;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
+use Doctrine\ORM\EntityManagerInterface;
 use Symfony\Component\Form\Extension\Core\Type\SubmitType;
 use Symfony\Component\Form\Extension\Core\Type\TextType;
 use Symfony\Component\HttpFoundation\Response;
@@ -36,4 +38,5 @@ class NoteController extends AbstractController
             'form' => $form,
         ]);
     }
+
 }

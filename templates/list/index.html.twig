@@ -21,6 +21,8 @@
 		{% for names in name %}
 			{{names.name}}
 			<a href="{{ path('note', {'id': names.id}) }}" id="{{names.id}}">Ajouter une note</a>
+			<a href="{{ path('noteliste_index', {'id': names.id}) }}" id="{{names.id}}">Modifier les notes</a>
+
 			<br>
 		{% endfor %}
 	</div>

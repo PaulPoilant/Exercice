@@ -18,6 +18,9 @@
 	</style>
 
 	<div class="example-wrapper">
-		{{ form(form) }}
-		</div>
-	{% endblock %}
+		{% if title is defined %}
+			{{ form(form )}}
+				{% else %}
+					{{ form(form) }}{% endif %}
+				</div>
+			{% endblock %}
